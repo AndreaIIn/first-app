@@ -1,0 +1,11 @@
+<h1>About</h1>
+
+<%= @time_now %>
+<br>
+<p>
+  Possible mark six numbers are: 
+  <br>
+  <% 6.times do %>
+    <%= @prng.rand(1..49).to_s + " " %>
+  <% end %>
+</p>

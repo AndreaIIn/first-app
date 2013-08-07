@@ -1,0 +1,12 @@
+<h1>Comments#index</h1>
+<p>Find me in app/views/comments/index.html.erb</p>
+
+<p>Counts = <%= @comments.count %></p>
+
+<% @comments.each do |comment| %>
+  <tr>
+	<td><%= comment.id %></td>
+    <td><%= comment.text %></td>
+    <td><%= link_to 'Show', comment %></td>
+  </tr>
+<% end %>
