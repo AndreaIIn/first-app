@@ -8,7 +8,7 @@
 </head>
 <body>
 
-
+<div class='container'>
 	<div class="navbar navbar-inverse">
 	  <div class="navbar-inner">
 	    <div class="container">
@@ -21,25 +21,13 @@
 				<li><%= link_to 'contact', contact_path %></li>	
 				<li><%= link_to 'post', posts_path %></li>	
 				<li><%= link_to 'comment', comments_path %></li>
-				<li>
-					<ul>
-		            
-					</ul>       
-				</li>
 	        </ul>
 	      </div>
 		</div>
 	  </div>
 	</div>
 
-	<li><%= link_to 'home', root_path %></li>
-	<li><%= link_to 'about', about_path %></li>
-	<li><%= link_to 'contact', contact_path %></li>	
-	<li><%= link_to 'post', posts_path %></li>	
-	<li><%= link_to 'comment', comments_path %></li>
-
-
 <%= yield %>
 
-</body>
+</div></body>
 </html>
