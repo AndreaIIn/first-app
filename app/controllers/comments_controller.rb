@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(params[:comment])
     @comment.save
     # redirect_to comments_path
-    redirect_to @comment.post
+    redirect_to @comment.post_id
   end
 
   def edit
