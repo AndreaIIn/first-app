@@ -16,10 +16,11 @@
 	<%= @post.comments.count %>
 </p>
 
-<% @post.comments.each do |comment| %>
+<% @post.comments.each_with_index do |comment, index| %>
   <tr>
-    <td><%= comment.post_id %></td>
+    <td><%= index + 1 %>. </td>
     <td><%= comment.text %></td>
+	<br>
   </tr>
 <% end %>
 
@@ -29,9 +30,10 @@
     <%= f.label :post_id %><br />
     <%= f.hidden_field :post_id, :value => @post.id %>
   </div>
+
   <div class="field">
     <%= f.label :text %><br />
-    <%= f.text_area :text %>
+    <%= f.text_area :text, :rows => "3", :placeholder => "Add comment...", :class => "span12" %>
   </div>
   <div class="actions">
     <%= f.submit %>

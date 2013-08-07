@@ -8,13 +8,34 @@
 </head>
 <body>
 
-<ul>
+
+	<div class="navbar navbar-inverse">
+	  <div class="navbar-inner">
+	    <div class="container">
+	      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#nav-collapse-01"></button>
+	      <a href="#" class="brand fui-flat"></a>
+	      <div class="nav-collapse collapse" id="nav-collapse-01">
+	        <ul class="nav">
+				<li>
+					<ul>
+						<li><%= link_to 'home', root_path %></li>
+						<li><%= link_to 'about', about_path %></li>
+						<li><%= link_to 'contact', contact_path %></li>	
+						<li><%= link_to 'post', posts_path %></li>	
+						<li><%= link_to 'comment', comments_path %></li>		            
+					</ul>       
+				</li>
+	        </ul>
+	      </div>
+		</div>
+	  </div>
+	</div>
+
 	<li><%= link_to 'home', root_path %></li>
 	<li><%= link_to 'about', about_path %></li>
 	<li><%= link_to 'contact', contact_path %></li>	
 	<li><%= link_to 'post', posts_path %></li>	
-	<li><%= link_to 'comment', comments_path %></li>	
-</ul>
+	<li><%= link_to 'comment', comments_path %></li>
 
 
 <%= yield %>
